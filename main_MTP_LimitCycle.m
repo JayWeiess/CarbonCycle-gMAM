@@ -5,9 +5,9 @@ clc
 % define the matrix function H_{\theta x},  H_x, H_\theta, \lambda,
 % \hat{\varphi}, b(u,v)
 % store the value of \varphi as a column vector
-load('LimitCycle_value_nu=0.1.mat')
+load('LimitCycle_value.mat')
 cx=62;
-v=0.1;
+v=0;                           % the external carbon dioxide input rate \nu 
 [H_1,H_2,H_21,H_22,Lambda,Theta,b,in_a]=myfunc(cx,v);
 %tau=1000;                                                                                                        %Define 1/\tau to be 10
 
@@ -305,5 +305,5 @@ js((iter-i_start)/i_interval+1,1)=j;
 %   xlabel('x')
 %    ylabel('$\lambda$','interpreter','latex','FontSize', 12)
 %   title(' Plot of $\lambda$','interpreter','latex', 'FontSize', 18)
-save('Results_nu=0.1_iter=30000_N=3000_tau=3000_no=1-10-3831.mat','Action_mini','Actions','P4','P_mini','idex','js');
+%    save('Results_nu=0_iter=30000_N=3000_tau=3000_no=1-10-3831.mat','Action_mini','Actions','P4','P_mini','idex','js');
 
